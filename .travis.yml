@@ -18,6 +18,7 @@ script:
   - mkdir -p appdir/usr/bin ; cp ./switch.timsueberkrueb appdir/usr/bin
   - mkdir -p appdir/usr/share/applications/ ; cp click/switch.timsueberkrueb.desktop appdir/usr/share/applications/switch.desktop
   - mv appdir/switch.timsueberkrueb.desktop appdir/switch.desktop
+  - sed -i -e 's|.png||g' appdir/switch.desktop
   - mkdir -p appdir/usr/share/pixmaps/ ; mv appdir/icon.png appdir/usr/share/pixmaps/
   - rm appdir/*.apparmor || true
   - wget -c "https://github.com/probonopd/linuxdeployqt/releases/download/continuous/linuxdeployqt-continuous-x86_64.AppImage" 
